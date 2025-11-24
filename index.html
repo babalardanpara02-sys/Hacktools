@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ultra Cyber Hacker </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ÜST MODÜL MENÜSÜ -->
+<div class="nav">
+    <button onclick="showModule('discord')">DISCORD</button>
+    <button onclick="showModule('tiktok')">TIKTOK</button>
+    <button onclick="showModule('youtube')">YOUTUBE</button>
+    <button onclick="showModule('oyun')">OYUN PANELİ</button>
+    <button onclick="showModule('instagram')">INSTAGRAM</button>
+    <button onclick="showModule('admin')">ADMIN PANEL</button>
+    <button onclick="showModule('terminal')">TERMINAL</button>
+    <button onclick="showModule('profil')">PROFİL</button>
+</div>
+
+<!-- MODÜLLER -->
+<div class="panel module" id="discord">
+    <h2>DISCORD MODÜLÜ</h2>
+    <input type="text" placeholder="Ad">
+    <input type="text" placeholder="Soyad">
+    <input type="text" placeholder="Discord Kullanıcı Adı">
+    <input type="text" placeholder="Sunucu Adı">
+    <button class="finish" onclick="send('discord')">Tamamla</button>
+    <div class="msgBox">Discord bilgileri kaydedildi.</div>
+</div>
+
+<div class="panel module" id="tiktok">
+    <h2>TIKTOK MODÜLÜ</h2>
+    <input type="text" placeholder="Ad">
+    <input type="text" placeholder="Soyad">
+    <input type="text" placeholder="TikTok Kullanıcı Adı">
+    <input type="text" placeholder="Takipçi Sayısı">
+    <button class="finish" onclick="send('tiktok')">Tamamla</button>
+    <div class="msgBox">TikTok bilgileri kaydedildi.</div>
+</div>
+
+<div class="panel module" id="youtube">
+    <h2>YOUTUBE MODÜLÜ</h2>
+    <input type="text" placeholder="Ad">
+    <input type="text" placeholder="Soyad">
+    <input type="text" placeholder="Kanal Adı">
+    <input type="text" placeholder="Abone Sayısı">
+    <button class="finish" onclick="send('youtube')">Tamamla</button>
+    <div class="msgBox">YouTube bilgileri kaydedildi.</div>
+</div>
+
+<div class="panel module" id="oyun">
+    <h2>OYUN PANELİ</h2>
+    <input type="text" placeholder="Ad">
+    <input type="text" placeholder="Oyun Adı">
+    <input type="text" placeholder="Oyun ID">
+    <input type="text" placeholder="Rank">
+    <button class="finish" onclick="send('oyun')">Tamamla</button>
+    <div class="msgBox">Oyun bilgileri kaydedildi.</div>
+</div>
+
+<div class="panel module" id="instagram">
+    <h2>INSTAGRAM MODÜLÜ</h2>
+    <input type="text" placeholder="Ad">
+    <input type="text" placeholder="Instagram Kullanıcı Adı">
+    <input type="text" placeholder="Takipçi Sayısı">
+    <button class="finish" onclick="send('instagram')">Tamamla</button>
+    <div class="msgBox">Instagram bilgileri kaydedildi.</div>
+</div>
+
+<div class="panel module" id="admin">
+    <h2>ADMIN PANEL</h2>
+    <input type="text" placeholder="Admin Adı">
+    <input type="text" placeholder="Admin ID">
+    <button class="finish" onclick="send('admin')">Tamamla</button>
+    <div class="msgBox">Admin paneli kaydedildi.</div>
+</div>
+
+<div class="panel module" id="terminal">
+    <h2>TERMINAL MODÜLÜ</h2>
+    <textarea placeholder="Komut girin..." rows="6"></textarea>
+    <button class="finish" onclick="send('terminal')">Tamamla</button>
+    <div class="msgBox">Terminal kaydedildi.</div>
+</div>
+
+<div class="panel module" id="profil">
+    <h2>PROFİL MODÜLÜ</h2>
+    <input type="text" placeholder="Ad">
+    <input type="text" placeholder="Soyad">
+    <input type="text" placeholder="Profil Linki">
+    <input type="text" placeholder="Yaş">
+    <button class="finish" onclick="send('profil')">Tamamla</button>
+    <div class="msgBox">Profil bilgileri kaydedildi.</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

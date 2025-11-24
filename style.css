@@ -1,0 +1,142 @@
+/* === GLOBAL === */
+body {
+    margin: 0;
+    font-family: "Courier New", monospace;
+    overflow: hidden;
+    color: #00fff6;
+
+    /* 5 ARKA PLAN EFEKTİNİ BİRLEŞTİRİYORUZ */
+    background:
+        url('https://i.imgur.com/ZKjZb5D.gif'),        /* Matrix yağmur */
+        url('https://i.imgur.com/Fg2CPbX.gif'),        /* Neon çizgiler */
+        url('https://i.imgur.com/f1tEw6t.gif'),        /* RGB patlama */
+        url('https://i.imgur.com/FJ4HclU.gif'),        /* Glitch efekt */
+        black;
+    background-size: cover;
+    background-blend-mode: screen;
+}
+
+
+/* === RGB KAYAN YAZI === */
+@keyframes rgbText {
+    0%   { color: #00fff6; text-shadow: 0 0 10px #00fff6; }
+    25%  { color: #ff00f6; text-shadow: 0 0 10px #ff00f6; }
+    50%  { color: #00ff3c; text-shadow: 0 0 10px #00ff3c; }
+    100% { color: #00fff6; text-shadow: 0 0 10px #00fff6; }
+}
+
+/* === ÜST MENÜ === */
+.nav {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav button {
+    padding: 12px 20px;
+    background: rgba(0,255,240,0.3);
+    border: 2px solid #00fff6;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    animation: rgbText 2s infinite;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.nav button:hover {
+    box-shadow: 0 0 20px #00fff6;
+    transform: scale(1.1);
+}
+
+/* === PANEL === */
+.panel {
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    width: 420px;
+    padding: 25px;
+    background: rgba(0,0,0,0.55);
+    border-radius: 15px;
+
+    /* LED BORDER */
+    border: 2px solid transparent;
+    background-image:
+        linear-gradient(black, black),
+        linear-gradient(120deg, #00fff6, #ff00f6, #00ff3c, #00fff6);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    animation: ledBorder 4s linear infinite;
+
+    box-shadow: 0 0 25px #00fff6, inset 0 0 25px #00fff6;
+}
+
+@keyframes ledBorder {
+    0% { background-position: 0% }
+    100% { background-position: 300% }
+}
+
+/* === FORM INPUT === */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 13px;
+    border-radius: 10px;
+    border: 2px solid #00fff6;
+    background: black;
+    color: #00fff6;
+    font-size: 16px;
+    box-shadow: 0 0 12px #00fff6;
+}
+
+/* === TAMAMLA BUTONU === */
+.finish {
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #00fff6, #ff00f6, #00ff3c);
+    background-size: 300%;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: rgbButton 3s infinite;
+}
+
+@keyframes rgbButton {
+    0% { background-position: 0%; }
+    50% { background-position: 100%; }
+    100% { background-position: 0%; }
+}
+
+/* === GÖRÜNÜR/GİZLİ === */
+.module { display: none; }
+
+.msgBox {
+    display: none;
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(0,255,225,0.2);
+    border-left: 4px solid #00fff6;
+}
+
+/* === MOUSE IŞIK İZİ === */
+.lightTrail {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background: #00fff6;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.7;
+    animation: trailFade 0.5s forwards;
+}
+
+@keyframes trailFade {
+    to { transform: scale(3); opacity: 0; }
+}
